@@ -1,23 +1,23 @@
 package com.demo
 
-object DemoCArray {
+object DemoDArray {
   def main(args: Array[String]): Unit = {
   println("heloo")
-  var marks=Array(10,20,30,40,50)
-  var avg=marks.reduceLeft((a,b) =>(a+b)/2)
-  println("avg is "+avg)
-    var avg2=marks.reduceLeft((a,b) =>{
+  var zmarks=Array(10,20,30,40,50,60)
+  var zavg=zmarks.reduceRight((a,b) =>(a+b)/2)
+  println("zavg is "+zavg)
+    var zavg2=zmarks.reduceRight((a,b) =>{
       println("value of a is" +a+" and value of b is" +b+" average value is "+(a+b)/2)
       (a+b)/2
     })
-    var totalMarks=marks.reduceLeft(_+_)
-    println("total marks-"+totalMarks)
+    var ztotalMarks=zmarks.reduceRight(_+_)
+    println("total marks-"+ztotalMarks)
     //Short hand use
-    var avg3=marks.reduceLeft(_/2+_/2)
-    println("avg3 is "+avg3)
-    var maxMarks=marks.reduceLeft(_ max _)
-    println("maxMarks is "+maxMarks)
-    var minMarks=marks.reduceLeft(_ min _)
-    println("minMarks is "+minMarks)
+    var avg3=zmarks.reduceRight(_/2+_/2)
+    println("zavg3 is "+avg3)
+    var zmaxMarks=zmarks.reduceRight(_ max _)
+    println("zmaxMarks is "+zmaxMarks)
+    var zminMarks=zmarks.reduceRight(_ min _)
+    println("zminMarks is "+zminMarks)
   }
 }
